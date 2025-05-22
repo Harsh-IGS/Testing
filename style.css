@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    flex: 1;
+}
+
+#sidebar {
+    width: 350px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-left: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+#sidebar h2 {
+    margin-top: 0;
+}
+
+#info-panel {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* fixed-height box around the chart */
+#chart-wrapper {
+    width: 100%;
+    height: 50%;      /* adjust this up/down to taste */
+    overflow: hidden;   /* prevent any inner scrollbars */
+}
+  
+/* make the canvas fill its parent box */
+#chartCanvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+  
+
+.info.legend {
+    background: white;
+    padding: 6px 8px;
+    font: 12px/14px Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+/* ensure each legend entry sits on its own line */
+.info.legend .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  /* style the little color squares */
+  .info.legend .legend-item i {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border: 1px solid #999;
+    opacity: 0.8;
+  }
+  
+  /* optional: give the legend container a bit more padding */
+  .info.legend {
+    padding: 8px 10px;
+  }
+  
